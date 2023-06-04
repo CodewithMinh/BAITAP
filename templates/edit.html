@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="static/css/edit.css">
+  <title>Chỉnh sửa người dùng</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Chỉnh sửa người dùng</h2>
+    <form method="POST" action="/edit/{{ user.id }}">
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" name="password" value="{{ user.password }}" required>
+
+      <label for="name">Họ và tên</label>
+      <input type="text" id="name" name="name" value="{{ user.name }}" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="{{ user.email }}" required>
+
+      <label for="phone">Số điện thoại</label>
+      <input type="tel" id="phone" name="phone" value="{{ user.phone }}" required>
+
+      <label for="address">Địa chỉ</label>
+      <input type="text" id="address" name="address" value="{{ user.address }}" required>
+
+      <input type="submit" value="Lưu">
+    </form>
+  </div>
+</body>
+</html>

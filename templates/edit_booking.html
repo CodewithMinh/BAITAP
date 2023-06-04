@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+  <title>Edit Booking | Shaif's Cuisine</title>
+  <link rel="stylesheet" href="static/css/reset.css">
+  <link rel="stylesheet" href="static/css/globalStyles.css">
+  <link rel="stylesheet" href="static/css/components.css">
+  <!-- aos library css  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form__group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .form__group:last-child {
+      margin-bottom: 0;
+    }
+
+    .form__group::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .form__group label {
+      float: left;
+      width: 30%;
+      text-align: right;
+      margin-right: 2%;
+      line-height: 35px;
+    }
+
+    .form__group input,
+    .form__group select {
+      float: left;
+      width: 68%;
+    }
+
+    .form__actions {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .form__actions button {
+      padding: 10px 30px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form__actions button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav Section -->
+  <!-- Add your navigation code here -->
+
+  <!-- End Nav Section -->
+
+  <!-- Booking Section -->
+  <section id="form" data-aos="fade-up">
+    <div class="container">
+      <h3 class="form__title">Edit Booking</h3>
+      <div class="form__wrapper">
+        <form name="booking" method="POST" action="/booking/edit/{{ booking.id }}">
+          <div class="form__group">
+            <label for="customerID">Customer ID</label>
+            <input type="text" id="customerID" name="Customer ID" value="{{ booking.customer_id }}" required autocomplete="off">
+          </div>
+          <div class="form__group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" value="{{ booking.name }}" required autocomplete="off">
+          </div>
+          <div class="form__group">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="Phone" value="{{ booking.phone }}" required autocomplete="off">
+          </div>
+          <div class="form__group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="Date" value="{{ booking.date }}" required>
+          </div>
+          <div class="form__group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="Time" value="{{ booking.time }}" required>
+          </div>
+          <div class="form__actions">
+            <button type="submit">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- End Booking Section -->
+
+  <!-- Footer Section -->
+  <!-- Add your footer code here -->
+
+  <!-- End Footer Section -->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

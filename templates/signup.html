@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="static/css/signup.css">
+  <title>Đăng ký</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng ký</h2>
+    <form method="POST" action="/signup">
+      <label for="account">Tài khoản</label>
+      <input type="text" id="account" name="account" required>
+
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="name">Họ và tên</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Số điện thoại</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address">Địa chỉ</label>
+      <input type="text" id="address" name="address" required>
+
+      <input type="submit" value="Đăng ký">
+    </form>
+  </div>
+</body>
+</html>
